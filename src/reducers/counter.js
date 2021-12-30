@@ -1,8 +1,8 @@
+/* eslint-disable import/no-anonymous-default-export */
 
 import { counter as counterActions} from "../constants/actionTypes"
 
-const INITIAL_STATE = {
-
+export const INITIAL_STATE = {
     count:0,
 }
 

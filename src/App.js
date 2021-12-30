@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import { Provider, connect } from 'react-redux';
 import {store} from './config/store'
 import CounterActions from './actions/counter'
@@ -14,11 +13,11 @@ const CounterComponent = ({ counter, incrementarContador, decrementarContador })
 )
 
 const mapStateToProps = ({counter}) => ({
-  counter,
+  counter, 
 })
 
 const mapDispatchToProps = () => ({
-  ...CounterActions,
+  ...CounterActions
 })
 
 const ConnecedCounterComponent = connect(mapStateToProps, mapDispatchToProps())(CounterComponent)
@@ -27,7 +26,7 @@ function App() {
   return (
     <Provider store={store} >
     <div className="App">
-      <ConnecedCounterComponent/>
+      <ConnecedCounterComponent />
     </div>
     </Provider>
   );
